@@ -6,4 +6,4 @@ class User:
         self.last_name = last_name
         self.nickname = nickname
         self.date_of_birth = date_of_birth
-        self.preferred_name = preferred_name or first_name
+        self.preferred_name = nickname or first_name

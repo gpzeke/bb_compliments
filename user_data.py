@@ -1,5 +1,6 @@
 # Read and write user save information
 import json
+from user import User
 
 class UserData:     # handles the persistance of user data
     def __init__(self, filename="users.json"):
@@ -7,13 +8,16 @@ class UserData:     # handles the persistance of user data
 
     def save_users(self, users):    # saves a list of user objects
         with open(self.filename, "w") as file:  # with ensure closes properly after execution
-            user_data = [{   "first_name": user.first_name,
-                            "last_name":user.last_name,
-                            "nickname":user.nickname,
-                            "date_of_birth":user.date_of_birth,
-                            "preferred_name":user.preferred_name}
-                        for user in users]  # creates a list [] of dictionaries {}
-            json.dump(user_data, file)  # serializes user_data and writes to file
+            user_data = [
+                {   "first_name": user.first_name,
+                    "last_name":user.last_name,
+                    "nickname":user.nickname,
+                    "date_of_birth":user.date_of_birth,
+                    "preferred_name":user.preferred_name
+                }
+                        for user in users
+            ]  # creates a list [] of dictionaries {}
+            json.dump(user_data, file, indent=4)  # serializes user_data and writes to file
 
     def load_users(self):   # loads user data from file
         try:
