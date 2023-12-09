@@ -5,7 +5,7 @@ class ComplimentData:     # handles the persistance of user data
     def __init__(self, filename="compliments.json"):
         self.filename = filename
 
-    def load_users(self):   # loads user data from file
+    def load_compliments(self):   # loads user data from file
         try:
             with open(self.filename, "r") as file:
                 compliment_data = json.load(file)
