@@ -1,5 +1,5 @@
-from user_creation import create_user
-from user_data import UserData
+from BbCompliments.user_creation import create_user
+from BbCompliments.user_data_management import UserData
 
 def main():
     # Create a user
