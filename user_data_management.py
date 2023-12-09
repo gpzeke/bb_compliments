@@ -27,3 +27,6 @@ class UserData:     # handles the persistance of user data
                 return users
         except FileNotFoundError:
             return []
+        except json.decoder.JSONDecodeError:
+            print("Error decoding JSON. file users.json is empty list")
+            return []
