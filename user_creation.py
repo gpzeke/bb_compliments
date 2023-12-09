@@ -20,11 +20,3 @@ def create_user():
             print("Invalid selection, please enter 1 or 2.")
 
     preferred_name = first_name if preference_choice == '1' else nickname
-
-    return User(
-        first_name=first_name,
-        last_name=last_name,
-        nickname=nickname,
-        date_of_birth=date_of_birth,
-        preferred_name=preferred_name
-    )
