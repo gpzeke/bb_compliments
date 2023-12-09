@@ -2,7 +2,7 @@
 from user import User
 
 def create_user():
-    first_name = input("Enter your first name?\n")
+    first_name = input("What is your first name?\n")
     last_name = input("What is your last name?\n")
     nickname = input("What is your nickname?\n")
     date_of_birth = input("When were you born (YYYY-MM-DD)?\n")
